@@ -1,7 +1,8 @@
 from datetime import date
+from dataclasses import dataclass
 
-
+@dataclass(frozen=True)
 class Option:
-    def __init__(self, strike: float, expiry: date):
-        self.strike = strike
-        self.expiry = expiry
+    strike :float
+    expiry: date
+

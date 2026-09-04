@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
-    { name = "Alvaro05RB" email= "204503692+Alvaro05RB@users.noreply.github.com"}
+    { name = "Alvaro05RB", email= "204503692+Alvaro05RB@users.noreply.github.com"}
 ]
 requires-python = ">=3.14"
 dependencies = [
@@ -29,4 +29,5 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
+pythonpath = ["src/quant_engine"]
 testpaths = ["tests"]

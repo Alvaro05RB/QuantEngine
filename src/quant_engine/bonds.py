@@ -4,7 +4,6 @@ from enum import Enum, IntEnum
 
 import pandas as pd
 from dateutil.relativedelta import relativedelta
-from numpy import full
 
 
 class PaymentFrequency(IntEnum):
@@ -45,7 +44,7 @@ class Bond:
 
     def _day_count_calculations(self, start_date, end_date) -> float:
         if self.day_count == DayCountConvention.ACT_365:
-            return (end_date - start_date).days / 365
+            return (end_date - start_date).days / 365.0
         if self.day_count == DayCountConvention.ACT_ACT_ICMA:
             if self.frequency == PaymentFrequency.ZERO_COUPON:
                 return (end_date - start_date).days / 365.0
